@@ -1,0 +1,4 @@
+Docker Build Command
+docker build -t techtrends /Users/wyndell.lowie/nd064_course_1/project/techtrends
+Docker Run Command
+docker run -d -p 7111:3111 techtrends
