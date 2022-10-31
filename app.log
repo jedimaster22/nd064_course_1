@@ -249,3 +249,31 @@ INFO:app:Health check successful
 INFO:werkzeug:192.168.0.18 - - [25/Oct/2022 18:06:52] "GET /healthz HTTP/1.1" 200 -
 INFO:app:Metrics request successful
 INFO:werkzeug:192.168.0.18 - - [25/Oct/2022 18:06:58] "GET /metrics HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.18:3111/ (Press CTRL+C to quit)
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.18:3111/ (Press CTRL+C to quit)
+INFO:app:Main request successful
+INFO:werkzeug:127.0.0.1 - - [28/Oct/2022 14:59:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Oct/2022 14:59:13] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Oct/2022 14:59:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Oct/2022 14:59:18] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Oct/2022 14:59:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Metrics request successful
+INFO:werkzeug:127.0.0.1 - - [28/Oct/2022 14:59:26] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Oct/2022 14:59:46] "[33mGET /noend HTTP/1.1[0m" 404 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.0.18:3111/ (Press CTRL+C to quit)
+INFO:app:Main request successful
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:46:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:46:23] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Health check successful
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:46:28] "GET /healthz HTTP/1.1" 200 -
+INFO:app:Metrics request successful
+INFO:werkzeug:127.0.0.1 - - [31/Oct/2022 11:46:35] "GET /metrics HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.0.18:3111/ (Press CTRL+C to quit)

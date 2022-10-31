@@ -1,4 +1,38 @@
-Docker Build Command
+## Docker commands used to build the application
 docker build -t techtrends /Users/wyndell.lowie/nd064_course_1/project/techtrends
-Docker Run Command
+
+## Docker commands used to run the application
 docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+docker logs fdd773b95c3f
+
+## Logs from the container running the TechTrends application
+(.myvenv) Jorelyns-MacBook-Pro:techtrends wyndell.lowie$ docker logs fdd773b95c3f
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://172.17.0.3:3111/ (Press CTRL+C to quit)
+Main request successful
+172.17.0.1 - - [31/Oct/2022 16:09:11] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [31/Oct/2022 16:09:11] "GET /static/css/main.css HTTP/1.1" 304 -
+Health check successful
+172.17.0.1 - - [31/Oct/2022 16:09:22] "GET /healthz HTTP/1.1" 200 -
+Metrics request successful
+172.17.0.1 - - [31/Oct/2022 16:09:29] "GET /metrics HTTP/1.1" 200 -
+Main request successful
+172.17.0.1 - - [31/Oct/2022 16:09:36] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [31/Oct/2022 16:09:36] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [31/Oct/2022 16:09:39] "GET /about HTTP/1.1" 200 -
+172.17.0.1 - - [31/Oct/2022 16:09:39] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [31/Oct/2022 16:09:40] "GET /create HTTP/1.1" 200 -
+172.17.0.1 - - [31/Oct/2022 16:09:40] "GET /static/css/main.css HTTP/1.1" 304 -
+172.17.0.1 - - [31/Oct/2022 16:09:48] "POST /create HTTP/1.1" 302 -
+Main request successful
+172.17.0.1 - - [31/Oct/2022 16:09:48] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [31/Oct/2022 16:09:48] "GET /static/css/main.css HTTP/1.1" 304 -
+(.myvenv) Jorelyns-MacBook-Pro:techtrends wyndell.lowie$ 

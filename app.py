@@ -1,10 +1,34 @@
 import sqlite3
 import logging
+import sys
 
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 
 Counter=0
+
+# Setup Logger
+def setup_logger():
+    #Create the logger
+    logger = logging.getLogger()
+    #Set default to DEBUG
+    logger.setLevel(logging.DEBUG)
+
+    #Create console handler
+    s_handler = logging.StreamHandler()
+    #Set level to INFO
+    s_handler.setLevel(logging.INFO)
+
+    #Create file handler
+    f_handler = logging.FileHandler(filename='app.log')
+    #Set level to DEBUG
+    f_handler.setLevel(logging.DEBUG)
+
+    #Add handlers to logger
+    logger.addHandler(s_handler)
+    logger.addHandler(f_handler)
+
+    return logger
 
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
@@ -51,7 +75,8 @@ def healthz():
         mimetype='application/json'
     )
 
-    app.logger.info('Health check successful')
+#    app.logger.info('Health check successful')
+    logger.info("Health check successful")
     return response
 
 # Define Metrics endpoint
@@ -63,7 +88,8 @@ def metrics():
         mimetype='application/json'
     )
 
-    app.logger.info('Metrics request successful')
+#    app.logger.info('Metrics request successful')
+    logger.info("Metrics request successful")
     return response
 
 # Define the main route of the web application 
@@ -73,7 +99,8 @@ def index():
     posts = connection.execute('SELECT * FROM posts').fetchall()
     connection.close()
 
-    app.logger.info('Main request successful')
+#    app.logger.info('Main request successful')
+    logger.info("Main request successful")
     return render_template('index.html', posts=posts)
 
 # Define how each individual article is rendered 
@@ -113,6 +140,7 @@ def create():
 
 # start the application on port 3111
 if __name__ == "__main__":
-   logging.basicConfig(filename='app.log',level=logging.DEBUG)
-
+#   logging.basicConfig(filename='app.log',level=logging.DEBUG)
+   logger = setup_logger()
+   
    app.run(host='0.0.0.0', port='3111')
